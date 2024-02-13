@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BirdJump : MonoBehaviour
 {
+    [SerializeField] private Gamemanager Gamemanager;
     private Rigidbody2D rb;
     private float jumpstrength = 5f;
 
@@ -20,5 +21,9 @@ public class BirdJump : MonoBehaviour
             rb.velocity = Vector2.up * jumpstrength;
         }
         transform.rotation = Quaternion.Euler(0,0, rb.velocity.y > 0 ? 16f : -16f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        Gamemanager.GameOver();
     }
 }
