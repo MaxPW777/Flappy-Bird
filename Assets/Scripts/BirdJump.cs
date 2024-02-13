@@ -19,5 +19,6 @@ public class BirdJump : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpstrength;
         }
+        transform.rotation = Quaternion.Euler(0,0, rb.velocity.y > 0 ? 16f : -16f);
     }
 }
