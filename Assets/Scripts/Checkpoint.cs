@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private Gamemanager gamemanager;
+
+    private void Awake() {
+        gamemanager = FindObjectOfType<Gamemanager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other) {
+        gamemanager.increment_score();
     }
 }

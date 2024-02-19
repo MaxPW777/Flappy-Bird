@@ -13,6 +13,6 @@ public class ScoreChanger : MonoBehaviour
     }
 
     void Update() {
-        text.text = "score: " + gamemanager.getScore();
+        
     }
 }

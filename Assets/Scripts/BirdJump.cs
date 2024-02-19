@@ -27,8 +27,5 @@ public class BirdJump : MonoBehaviour
         Gamemanager.GameOver();
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        Gamemanager.increment_score();
-        Debug.Log("nigger");
-    }
+    
 }
